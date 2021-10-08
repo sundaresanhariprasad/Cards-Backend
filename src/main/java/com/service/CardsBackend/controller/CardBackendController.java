@@ -13,7 +13,7 @@ import com.service.CardsBackend.modal.DebitCards;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/cardBackend")
+@RequestMapping("/api/legacy")
 public class CardBackendController {
 	
 	@GetMapping(value = "/hello")
@@ -21,7 +21,7 @@ public class CardBackendController {
 		return "Hello String";
 	}
 	
-	@GetMapping("/getNewPlafformCards")
+	@GetMapping("/getCard")
 	public Card getCard() {
 		Card card= new Card();
 		List<DebitCards> cardList= new ArrayList<>();
@@ -30,10 +30,10 @@ public class CardBackendController {
 		debitCard.setTypeOfCard("1");
 		debitCard.setBrand("L");
 		debitCard.setNameOnCard("ALEX L");
-		debitCard.setCardNumber("5454449943798767");
+		debitCard.setCardNumber("4454449943798767");
 		debitCard.setMaskedCardNumber("XXXX XXXX XXXX 8767");
 		debitCard.setCardId(11222);
-		debitCard.setReplacedBycardNumber("5454449943798767");
+		debitCard.setReplacedBycardNumber("4454449943798767");
 		debitCard.setReplacedCardNumber("");
 		debitCard.setPlasticType("0412");
 		debitCard.setBasePlasticType("0412");
